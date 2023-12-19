@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Simple Flask App</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <form id="userForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="addUser()">Add User</button>
+        <button type="button" onclick="getUsers()">Get Users</button>
+    </form>
+
+    <div id="userList"></div>
+
+    <script src="{{ url_for('static', filename='user.js') }}"></script>
+</body>
+</html>
+
